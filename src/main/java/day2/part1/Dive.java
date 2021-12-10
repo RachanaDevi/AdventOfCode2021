@@ -40,7 +40,7 @@ public class Dive {
         commands.add(direction, unit);
     }
 
-    public Integer depthPositionProduct() {
+    public Integer depthHorizontalProduct() {
         if (commands.isEmpty()) return 0;
 
         if (!(commands.hasDepthDirections() && commands.hasForwardDirection())) return 0;

@@ -10,7 +10,7 @@ class DiveUnitTest {
     void shouldReturnZeroIfThereAreNoCommands() {
         Dive dive = new Dive();
 
-        assertThat(dive.depthPositionProduct()).isZero();
+        assertThat(dive.depthHorizontalProduct()).isZero();
     }
 
     @Test
@@ -18,7 +18,7 @@ class DiveUnitTest {
         Dive dive = new Dive();
         dive.add("forward", 5);
 
-        assertThat(dive.depthPositionProduct()).isZero();
+        assertThat(dive.depthHorizontalProduct()).isZero();
     }
 
     @Test
@@ -26,7 +26,7 @@ class DiveUnitTest {
         Dive dive = new Dive();
         dive.add("down", 5);
 
-        assertThat(dive.depthPositionProduct()).isZero();
+        assertThat(dive.depthHorizontalProduct()).isZero();
     }
 
     @Test
@@ -37,6 +37,6 @@ class DiveUnitTest {
         dive.add("up", 2);
         dive.add("forward", 10);
 
-        assertThat(dive.depthPositionProduct()).isEqualTo(156);
+        assertThat(dive.depthHorizontalProduct()).isEqualTo(156);
     }
 }
