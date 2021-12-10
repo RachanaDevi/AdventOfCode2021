@@ -1,5 +1,7 @@
 package day2.part1;
 
+import java.util.List;
+
 import static day2.part1.Constants.*;
 
 /*
@@ -47,9 +49,16 @@ public class Dive {
 
         var directionSumMap = commands.directionSumMap();
 
-        int depthUnit = directionSumMap.getOrDefault(DOWN_COMMAND, 0) + (int) directionSumMap.getOrDefault(UP_COMMAND, 0);
+        int depthUnit = directionSumMap.getOrDefault(DOWN_COMMAND, 0) + directionSumMap.getOrDefault(UP_COMMAND, 0) * -1;
         int horizontalUnit = directionSumMap.get(FORWARD_COMMAND);
         return depthUnit * horizontalUnit;
+    }
+
+    void addCommands(List<String> commands) {
+        for (String entry : commands) {
+            String[] directionUnitSplit = entry.split(" ");
+            add(directionUnitSplit[0], Integer.parseInt(directionUnitSplit[1]));
+        }
     }
 }
 
