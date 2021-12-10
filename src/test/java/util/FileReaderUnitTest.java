@@ -3,11 +3,9 @@ package util;
 import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class FileReaderUnitTest {
 
@@ -25,6 +23,4 @@ class FileReaderUnitTest {
         assertEquals(List.of("199", "200", "208", "210", "200", "207", "240", "269", "260", "263"),
                 fileEntries);
     }
-
-
 }
