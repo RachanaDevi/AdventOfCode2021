@@ -1,4 +1,4 @@
-package day1;
+package day1.part1;
 
 import org.junit.jupiter.api.Test;
 import util.FileReader;
@@ -63,7 +63,7 @@ class SonarSweepUnitTest {
 
     @Test
     void shouldReturnIncreasedEntriesInPuzzleInput() throws IOException {
-        List<String> sonarEntries = FileReader.entriesIn("/Users/rachanadevi/Coding/AdventOfCode_2021/src/test/java/day1/part1_puzzle_input.txt");
+        List<String> sonarEntries = FileReader.entriesIn("/Users/rachanadevi/Coding/AdventOfCode_2021/src/test/java/day1/part1/part1_puzzle_input.txt");
         SonarSweep sonarSweep = new SonarSweep(sonarEntries);
 
         int measurements = sonarSweep.increasedMeasurements();
