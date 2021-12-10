@@ -9,8 +9,8 @@ Sonar sweep with 3 measurement window
  */
 public class SonarSweep {
 
-    private final List<Integer> sonarEntries;
     private static final int SLIDING_WINDOW_SIZE = 3;
+    private final List<Integer> sonarEntries;
 
     public SonarSweep(List<String> sonarEntries) {
         this.sonarEntries = sonarEntries.stream().map(Integer::parseInt).collect(Collectors.toList());

@@ -33,7 +33,7 @@ So at the end you multiply 15*10=150
  */
 public class Dive {
 
-    private Commands commands = new Commands();
+    private final Commands commands = new Commands();
 
     public Dive() {
     }
