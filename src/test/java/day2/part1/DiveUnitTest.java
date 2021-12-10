@@ -1,6 +1,5 @@
 package day2.part1;
 
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -31,12 +30,13 @@ class DiveUnitTest {
     }
 
     @Test
-    @Disabled
     void shouldReturnDepthPositionProductGivenTwoCommands() {
         Dive dive = new Dive();
-        dive.add("down", 5);
-        dive.add("forward", 5);
+        dive.add("forward", 3);
+        dive.add("down", 10);
+        dive.add("up", 2);
+        dive.add("forward", 10);
 
-        assertThat(dive.depthPositionProduct()).isEqualTo(25);
+        assertThat(dive.depthPositionProduct()).isEqualTo(156);
     }
 }

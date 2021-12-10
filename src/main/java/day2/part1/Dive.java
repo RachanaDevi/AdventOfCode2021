@@ -1,5 +1,7 @@
 package day2.part1;
 
+import static day2.part1.Constants.*;
+
 /*
 
 Commands:
@@ -44,8 +46,10 @@ public class Dive {
         if (!(commands.hasDepthDirections() && commands.hasForwardDirection())) return 0;
 
         var directionSumMap = commands.directionSumMap();
-        return null;
 
+        int depthUnit = directionSumMap.getOrDefault(DOWN_COMMAND, 0) + (int) directionSumMap.getOrDefault(UP_COMMAND, 0);
+        int horizontalUnit = directionSumMap.get(FORWARD_COMMAND);
+        return depthUnit * horizontalUnit;
     }
 }
 
